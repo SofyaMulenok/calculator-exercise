@@ -11,7 +11,7 @@ div{
   background-color: grey;
 }
 
-#calculator div{
+#calculator button{
   width: 125px;
   height: 125px;
   border: 3px solid black;

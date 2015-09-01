@@ -17,19 +17,23 @@
 
 for (i=1; i<=12; i++) {
 
-    var row1 = document.createElement("div");
+    var row1 = document.createElement("button");
         if (i == 4) {
             row1.innerText = "+";
+            row1.className = "btn";
         }
             else if (i == 8) {
                 row1.innerText = "-";
+                row1.className = "btn";
             }
                else if (i == 12) {
-                row1.innerText = "="; 
+                row1.innerText = "=";
+                row1.className = "btn"; 
             }
                 else {
                     row1.innerText = num
                     num++
+                    row1.className = "btn";
                 }
                     calculator.appendChild(row1);
 }
@@ -37,6 +41,19 @@ for (i=1; i<=12; i++) {
     var solution_bar = document.createElement("p");
     solution_bar.id = "solution_bar";
     calculator.appendChild(solution_bar);
+
+    function giveMeYourValue(e){
+        console.log(e.target.value);
+    }
+
+    function printValue(){
+        console.log("0");
+    }
+
+var myNumButton=document.getElementsByClassName('btn');
+
+console.log(myNumButton[0]);
+myNumButton[0].addEventListener('click', giveMeYourValue );
 
     </script>
   </body>
